@@ -1,13 +1,18 @@
-function averageArray(arr){
+function lowestIndex(array) {
 	
-  var sum = 0;
-  var n = arr.length;
+  var lowestIndex = 0, 
+  i;
 
-  for ( var i=0; i< arr.length; i++){
-    sum += arr[i];
-  }
-     return sum / n;
-
-  };
-
-  console.log(averageArray([1,3,9,15,90]))
+    for (i = 1; i < array.length; i++) {
+        if (array[i] <= array[lowestIndex]) {
+          
+          lowestIndex = [i];
+          
+        }
+    }
+    
+   return lowestIndex;
+	
+}
+	
+console.log(lowestIndex([-1, -7, 1, 5, -7, 0])); 
