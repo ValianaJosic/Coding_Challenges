@@ -10,6 +10,7 @@ function getPositives(ar){
       arrpositive.push(pos);
     }
   }
+  
   return arrpositive
 }
 
