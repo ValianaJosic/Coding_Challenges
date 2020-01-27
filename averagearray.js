@@ -10,4 +10,4 @@ function averageArray(arr){
 
   };
 
-  console.log(averageArray([1,3,9,15,90]))
+  console.log(averageArray([1,3,9,15,9,0]))
