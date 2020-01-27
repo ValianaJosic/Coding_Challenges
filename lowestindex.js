@@ -2,17 +2,29 @@ function lowestIndex(array) {
 	
   var lowestIndex = 0, 
   i;
+  var j = 0;
+  
+  var position =[];
 
     for (i = 1; i < array.length; i++) {
-        if (array[i] <= array[lowestIndex]) {
+        if (array[i] < array[lowestIndex]) {
           
-          lowestIndex = [i];
-          
-        }
+          smallervalue = array[i];
+          lowestIndex = i;
+        
+        }}
+
+    for (i = 0; i < array.length; i++)
+    {
+      if(smallervalue === array[i])
+      {
+        position[j] = i;
+        j++;
+      }
     }
     
-   return lowestIndex;
+   return position;
 	
 }
 	
-console.log(lowestIndex([-1, -7, 1, 5, -7, 0])); 
+console.log(lowestIndex([-1, -7, 1, 5, -7, 0, 3, -7, 0])); 
