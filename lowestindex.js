@@ -1,7 +1,6 @@
 function lowestIndex(array) {
 	
-  var lowestIndex = 0, 
-  i;
+  var lowestIndex = 0;
   var j = 0;
   
   var position =[];

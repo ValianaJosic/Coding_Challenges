@@ -1,8 +1,7 @@
 function lowestIndex(arr) {
 
    
-    var lowestindex = 0,
-    i;
+    var lowestindex = 0;
     var j = 0;
     var position = [];
 
@@ -24,4 +23,4 @@ function lowestIndex(arr) {
     return position;
 }
 
-console.log(lowestIndex([2, 4, 5, 18, -3, 9, -3]));
+console.log(lowestIndex([2, -3, 5, 18, -3, 9, -3]));
