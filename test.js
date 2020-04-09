@@ -1,4 +1,3 @@
-
 function lowestIndex(arr) {
 
    
@@ -7,7 +6,7 @@ function lowestIndex(arr) {
     var j = 0;
     var position = [];
 
-    for (i = 1; i < arr.length; i++) {
+    for (i = 0; i < arr.length; i++) {
 
         if (arr[i] < arr[lowestindex]) {
 

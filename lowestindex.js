@@ -6,7 +6,7 @@ function lowestIndex(array) {
   
   var position =[];
 
-    for (i = 1; i < array.length; i++) {
+    for (i = 0; i < array.length; i++) {
         if (array[i] < array[lowestIndex]) {
           
           smallervalue = array[i];
