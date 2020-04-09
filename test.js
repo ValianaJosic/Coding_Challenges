@@ -1,13 +1,28 @@
-function reverseString(s){
-    var s2 = "";
 
-    for( var i = s.length - 1; i >= 0; i--){
+function lowestIndex(arr) {
 
-        var letter = s[i];
-        s2 += letter;
+   
+    var lowestindex = 0,
+    i;
+    var j = 0;
+    var position = [];
 
+    for (i = 1; i < arr.length; i++) {
+
+        if (arr[i] < arr[lowestindex]) {
+
+            smallestvalue = arr[i];
+            lowestindex = i;
+        }
     }
-    return s2;
+    for (i = 0; i < arr.length; i++) {
+
+        if (smallestvalue === arr[i]) {
+            position[j] = i;
+            j++;
+        }
+    }
+    return position;
 }
 
-console.log(reverseString("Hello"));
+console.log(lowestIndex([2, 4, 5, 18, -3, 9, -3]));
