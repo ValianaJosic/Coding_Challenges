@@ -5,7 +5,8 @@ function lowestIndex(array) {
   var position = [];
 
   for (i = 0; i < array.length; i++) {
-    if (array[i] < array[lowestIndex]) {
+
+    if (array[i] <= array[lowestIndex]) {
 
       smallervalue = array[i];
       lowestIndex = i;
@@ -14,9 +15,12 @@ function lowestIndex(array) {
   }
 
   for (i = 0; i < array.length; i++) {
+
     if (smallervalue === array[i]) {
+
       position[j] = i;
       j++;
+      
     }
   }
 
