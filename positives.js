@@ -2,7 +2,7 @@ function getPositives(ar){
 
   var arrpositive = [];
 
-  for(var i=0;i <ar.length;i++){
+  for( i=0;i <ar.length;i++){
 
     var pos = ar[i];
 
