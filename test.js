@@ -1,23 +1,28 @@
-function minimumBribes(q) {
-    let bribeCount = []
-    let high = 0;
-    
-    for (let i = 0; i < q.length; i++) {
-        let val = q[i]
-        bribeCount[val] = 0
-        high = Math.max(val, high)  // update the highest value encountered
-      
-        if (val < high) {
-            // if current value < high value, increment value for all bribeCount indices > val
-            for (let j=val+1; j < bribeCount.length; j++) {
-                bribeCount[j]++
-                if (bribeCount[j] > 2) {
-                    console.log("Too chaotic")
-                    return;
-                }
-            }
+function lowestIndex(arr) {
+
+    var lowestIndex = 0;
+    var j = 0;
+    var positions = [];
+
+    for (i = 0; i < arr.length; i++) {
+
+        if (arr[i] <= arr[lowestIndex]) {
+
+            smallestValue = arr[i];
+            lowestIndex = i;
         }
     }
-    const sum = bribeCount.reduce((a,b) => a + b, 0)  // sum
-    console.log(sum);
+
+    for (i = 0; i < arr.length; i++) {
+
+        if (smallestValue === arr[i]) {
+
+            positions[j] = i;
+            j++;
+        }
+    }
+
+    return positions;
 }
+
+console.log(lowestIndex([1, 4, -6, 7, 0, -6]));
