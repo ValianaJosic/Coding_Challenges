@@ -1,21 +1,15 @@
-const fizzBuzz = num => {
+const findVowels = str => {
 
-    for (let i = 1; i <= num; i++) {
+let count = 0
+const vowels = [ 'a', 'e', 'i', 'o', 'u']
 
-        if (i % 15 === 0) {
-            console.log('fizzbuzz')
-        }
+for( let char of str.toLowerCase()){
 
-        else if (i % 3 === 0) {
-            console.log('fizz')
-        }
-        else if (i % 5 === 0) {
-            console.log('buzz')
-        }
-        else {
-            console.log(i)
-        }
+    if (vowels.includes(char)){
+        count ++
     }
 }
+    return count
+}
 
-fizzBuzz(20)
+console.log(findVowels('Candle'))

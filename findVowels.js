@@ -12,5 +12,4 @@ const findVowels = str => {
     return count
   }
 
-  console.log(findVowels('Hola'))
-  
+  console.log(findVowels('Hola Senorita'))
