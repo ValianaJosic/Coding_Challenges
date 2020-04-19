@@ -1,14 +1,13 @@
-const  findVowels = (str) => {
+const isAnagram = (first, second) => {
 
-    let count = 0
-    const vowels = ['a', 'e','i', 'o', 'u']
+    let str1 = first.toLowerCase()
+    let str2 = second.toLowerCase()
 
-    for( let char of str.toLowerCase() ){
-        if(vowels.includes(char)){
-            count++
-        }
-    }
-    return count
-} 
+    str1 = str1.split('').sort().join('')
+    str2 = str2.split('').sort().join('')
 
-console.log(findVowels('Alani'))
+    return str1 === str2
+
+}
+
+console.log(isAnagram('friend', 'Finder'))
