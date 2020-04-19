@@ -13,3 +13,4 @@ const findVowels = str => {
   }
 
   console.log(findVowels('Hola Senorita'))
+ 
