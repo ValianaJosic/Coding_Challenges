@@ -1,8 +1,12 @@
-const palindrome = (str) => {
+const reverseArray = (arr) => {
 
-    str = str.toLowerCase()
-    return str === str.split('').reverse().join('')
+    let arr2 = []
 
+    for( let i = arr.length - 1; i >= 0; i--){
+
+        arr2.push(arr[i])
+    }
+    return arr2
 }
 
-console.log(palindrome('Ana'))
+console.log(reverseArray([1, 2, 3]))
