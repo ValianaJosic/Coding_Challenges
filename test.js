@@ -1,12 +1,15 @@
-const reverseArray = (arr) => {
 
-    let arr2 = []
+ let candName = ''
+let question = 'Who was the first American woman in space?'
+let answer = 'Sally Ride'
+let response = ''
 
-    for( let i = arr.length - 1; i >= 0; i--){
+const askName = (name) => {
 
-        arr2.push(arr[i])
-    }
-    return arr2
+    const message = 'Candidate name: '
+
+    return message + name
+
 }
 
-console.log(reverseArray([1, 2, 3]))
+console.log(askName('Vali'))

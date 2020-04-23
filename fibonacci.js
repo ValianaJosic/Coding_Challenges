@@ -6,4 +6,4 @@ function fib(n){
  return arr[n]
 }
 
-  console.log(fib(6))
+  console.log(fib(8))
