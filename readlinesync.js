@@ -17,7 +17,6 @@ const App = () => {
 
     let response = []
 
-
     let cand = input.question('Candidate Name: ')
 
     name.push(cand)
