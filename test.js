@@ -3,7 +3,7 @@ const FizzBuzz = (n) =>{
     for(i=1; i <= n; i++){
 
     if( i % 15 === 0){
-        console.log('FizzBuzz')
+        console.log('Fizz Buzz')
     }
     else if( i % 3 === 0){
         console.log('Fizz')
