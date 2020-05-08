@@ -1,20 +1,13 @@
-const FizzBuzz = (n) =>{
+function isAnagram(first, second) {
 
-    for(i=1; i <= n; i++){
-
-    if( i % 15 === 0){
-        console.log('Fizz Buzz')
-    }
-    else if( i % 3 === 0){
-        console.log('Fizz')
-    }
-    else if(i % 5 === 0){
-        console.log('Buzz')
-    }
-    else{
-        console.log(i)
-    }
-}
-}
-
-FizzBuzz(50)
+    var a = first.toLowerCase();
+    var b = second.toLowerCase();
+  
+    a = a.split("").sort().join("");
+    b = b.split("").sort().join("");
+  
+    return a === b;
+  }
+  
+    console.log(isAnagram("friend", "finder"))
+    
