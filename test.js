@@ -1,13 +1,15 @@
-function isAnagram(first, second) {
+const findVowels = str => {
 
-    var a = first.toLowerCase();
-    var b = second.toLowerCase();
-  
-    a = a.split("").sort().join("");
-    b = b.split("").sort().join("");
-  
-    return a === b;
+    let count = 0
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+
+    for(let char of str.toLowerCase()) {
+
+      if(vowels.includes(char)) {
+        count++
+      }
+    }
+    return count
   }
-  
-    console.log(isAnagram("friend", "finder"))
-    
+
+  console.log(findVowels('Hola Senorita'))
