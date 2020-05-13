@@ -1,4 +1,3 @@
-
 var text = 'apple';
 
 function logIt() {
