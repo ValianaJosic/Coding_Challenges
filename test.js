@@ -7,3 +7,5 @@ function logIt() {
 
 };
 logIt();
+
+console.log(text)
