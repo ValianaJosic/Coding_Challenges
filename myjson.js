@@ -1,4 +1,4 @@
-var obj = {
+obj = {
    "Structure": {
       "type": "Document",
       "documentType": "document",
