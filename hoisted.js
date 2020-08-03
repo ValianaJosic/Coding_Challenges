@@ -4,4 +4,3 @@ var girl = function () {
     var x = 20;
 };
 girl ();
-ho
