@@ -1,13 +1,31 @@
-function averageArray(arr){
-	
-    var sum = 0;
-    var n = arr.length;
-  
-    for ( var i=0; i< arr.length; i++){
-      sum += arr[i];
+function lowestIndex(array) {
+
+  var lowestIndex = 0;
+  var j = 0;
+  var position = [];
+
+  for (i = 0; i < array.length; i++) {
+
+    if (array[i] <= array[lowestIndex]) {
+
+      smallervalue = array[i];
+      lowestIndex = i;
+
     }
-       return sum / n;
-  
-    };
-  
-    console.log(averageArray([1,3,9,15,9,0]))
+  }
+
+  for (i = 0; i < array.length; i++) {
+
+    if (smallervalue === array[i]) {
+
+      position[j] = i;
+      j++;
+      
+    }
+  }
+
+  return position;
+
+}
+
+console.log(lowestIndex([-1, -7, 1, 5, -7, 0, 3, -7, 0])); 
