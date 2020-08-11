@@ -1,21 +1,33 @@
-function foo1()
-{
-  return {
-      bar: "hello"
-  };
+function lowestIndex(array) {
+
+  var lowestIndex = 0;
+  var j = 0;
+  var position = [];
+
+  for (i = 0; i < array.length; i++) {
+
+    if (array[i] <= array[lowestIndex]) {
+
+      smallervalue = array[i];
+      lowestIndex = i;
+
+    }
+  }
+
+  for (i = 0; i < array.length; i++) {
+
+    if (smallervalue === array[i]) {
+
+      position[j] = i;
+      j++;
+      
+    }
+  }
+
+  return position;
+
 }
 
-function foo2()
-{
-  return
-  {
-      bar: "hello"
-  };
-}
-
-console.log("foo1 returns:");
-console.log(foo1());
-console.log("foo2 returns:");
-console.log(foo2());
+console.log(lowestIndex([-1, -7, 1, 5, -7, 0, 3, -7, 0])); 
 
 
