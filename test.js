@@ -1,18 +1,7 @@
-const fizzBuzz = num => {
-  for(let i = 1; i <= num; i++) {
+var x = 21;
+var girl = function () {
+    console.log(x);
+    var x = 20;
+};
+girl ();
 
-    if(i % 3 === 0 && i % 5 === 0) {
-      console.log('fizzbuzz')
-    } 
-      else if(i % 3 === 0) {
-      console.log('fizz')
-    } 
-      else if(i % 5 === 0) {
-      console.log('buzz')
-    } else {
-      console.log(i)
-    }
-  }
-}
-
-fizzBuzz(10);
