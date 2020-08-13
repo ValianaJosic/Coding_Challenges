@@ -1,20 +1,15 @@
-const fizzBuzz = num => {
-  for(let i = 1; i <= num; i++) {
+function averageArray(arr){
+	
+  var sum = 0;
+  var n = arr.length;
 
-    if(i % 3 === 0 && i % 5 === 0) {
-      console.log('fizzbuzz')
-    } 
-      else if(i % 3 === 0) {
-      console.log('fizz')
-    } 
-      else if(i % 5 === 0) {
-      console.log('buzz')
-    } else {
-      console.log(i)
-    }
+  for ( var i=0; i< arr.length; i++){
+    sum += arr[i];
   }
-}
+     return sum / n;
 
-fizzBuzz(10);
+  };
+
+  console.log(averageArray([1,3,9,15,9,0]))
 
 
