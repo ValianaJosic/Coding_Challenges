@@ -1,11 +1,12 @@
+var arr = [1, 2, 3];
+rotateRight(arr);
+console.log(arr);
 
-const palindrome = str => {
-    
-    str = str.toLowerCase()
-    return str === str.split('').reverse().join('')
-  }
+function rotateRight(arr) {
 
-  console.log(palindrome("Ana"))
+    var last = arr.pop();
+    arr.unshift(last);
+}
 
 
 
