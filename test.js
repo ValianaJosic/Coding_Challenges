@@ -1,14 +1,20 @@
-function sumDigits(n){
+const FizzBuzz = (n) => {
 
-    var s = n.toString();
-    var sum = 0;
+    for (i=1; i <= n; i++){
 
-    for(var char of s){
-
-        var digit = parseInt(char);
-        sum += digit;
+        if( i % 3 === 0 && i % 5 === 0){
+            console.log('FizzBuzz')
+        }
+        else if( i % 3 === 0){
+            console.log('Fizz')
+        }
+        else if (i % 5 === 0){
+            console.log('Buzz')
+        }
+        else{
+            console.log(i)
+        }
     }
-    return sum;
 }
 
-console.log( "Sum :", sumDigits(1235231))
+FizzBuzz(20)

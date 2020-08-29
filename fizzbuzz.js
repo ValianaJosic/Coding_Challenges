@@ -15,4 +15,4 @@ const fizzBuzz = num => {
     }
   }
   
-  fizzBuzz(10);
+  fizzBuzz(20);
