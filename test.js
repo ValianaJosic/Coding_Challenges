@@ -1,20 +1,32 @@
-const FizzBuzz = (n) => {
+function lowestIndex(array) {
 
-    for (i=1; i <= n; i++){
-
-        if( i % 3 === 0 && i % 5 === 0){
-            console.log('FizzBuzz')
-        }
-        else if( i % 3 === 0){
-            console.log('Fizz')
-        }
-        else if (i % 5 === 0){
-            console.log('Buzz')
-        }
-        else{
-            console.log(i)
-        }
+    var lowestIndex = 0;
+    var j = 0;
+    var position = [];
+  
+    for (i = 0; i < array.length; i++) {
+  
+      if (array[i] <= array[lowestIndex]) {
+  
+        smallervalue = array[i];
+        lowestIndex = i;
+  
+      }
     }
-}
-
-FizzBuzz(20)
+  
+    for (i = 0; i < array.length; i++) {
+  
+      if (smallervalue === array[i]) {
+  
+        position[j] = i;
+        j++;
+        
+      }
+    }
+  
+    return position;
+  
+  }
+  
+  console.log(lowestIndex([-1, -7, 1, 5, -7, 0, 3, -7, 0])); 
+  
