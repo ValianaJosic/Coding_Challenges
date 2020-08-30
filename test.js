@@ -1,11 +1,20 @@
-const evenOdd = n =>{
-  
-  if( n % 2 === 0){
-     console.log('EVEN')
-  }else{
-     console.log('ODD')
-  }
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
 }
 
-evenOdd(2)
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+
+console.log("foo1 returns:");
+console.log(foo1());
+console.log("foo2 returns:");
+console.log(foo2());
   
