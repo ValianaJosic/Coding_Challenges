@@ -1,20 +1,11 @@
-function foo1()
-{
-  return {
-      bar: "hello"
-  };
-}
+var arr = [1, 2, 3];
+rotateLeft(arr);
+console.log(arr);
 
-function foo2()
-{
-  return
-  {
-      bar: "hello"
-  };
-}
+function rotateLeft(arr){
 
-console.log("foo1 returns:");
-console.log(foo1());
-console.log("foo2 returns:");
-console.log(foo2());
+    var first = arr.shift();
+    arr.push(first);
+
+}
   
