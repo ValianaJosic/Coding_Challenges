@@ -1,11 +1,35 @@
-var arr = [1, 2, 3];
-rotateLeft(arr);
-console.log(arr);
+function printPrimes(nPrimes){
+    var n = 0;
+    var i = 2;
 
-function rotateLeft(arr){
+    while(n < nPrimes){
 
-    var first = arr.shift();
-    arr.push(first);
+        if(isPrime(i)){
+            console.log(n, " --> ", i);
+            n++
+        }
+        i++;
+    }
+}
+
+function isPrime(n){
+if(n < 2)
+    return false;
+
+if(n == 2) 
+return true;
+
+var maxDiv = Math.sqrt(n);
+
+for(var i=2; i <= maxDiv; i++){
+
+    if ( n % i == 0){
+        return false;
+    }
+}
+return true;
 
 }
+
+console.log(printPrimes(100))
   
