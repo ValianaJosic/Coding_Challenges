@@ -1,7 +1,6 @@
 var a = "42";
 
-var b = a * 1;    // "42" implicitly coerced to 42 here
+var b = Number( a );
 
 a;                // "42"
 b;                // 42 -- the number!
-  
