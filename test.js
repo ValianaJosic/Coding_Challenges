@@ -1,35 +1,7 @@
-function printPrimes(nPrimes){
-    var n = 0;
-    var i = 2;
+var a = "42";
 
-    while(n < nPrimes){
+var b = a * 1;    // "42" implicitly coerced to 42 here
 
-        if(isPrime(i)){
-            console.log(n, " --> ", i);
-            n++
-        }
-        i++;
-    }
-}
-
-function isPrime(n){
-if(n < 2)
-    return false;
-
-if(n == 2) 
-return true;
-
-var maxDiv = Math.sqrt(n);
-
-for(var i=2; i <= maxDiv; i++){
-
-    if ( n % i == 0){
-        return false;
-    }
-}
-return true;
-
-}
-
-console.log(printPrimes(100))
+a;                // "42"
+b;                // 42 -- the number!
   
