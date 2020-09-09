@@ -1,6 +1,9 @@
-var a = "42";
+var arr = [1, 2, 3];
+rotateRight(arr);
+console.log(arr);
 
-var b = Number( a );
+function rotateRight(arr) {
 
-a;                // "42"
-b;                // 42 -- the number!
+    var last = arr.pop();
+    arr.unshift(last);
+}
