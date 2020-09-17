@@ -1,14 +1,12 @@
-var s = reverseString("Javascript");
-console.log(s);
+function arraySum(arr){
 
-function reverseString(s){
+    var sum = 0;
 
-    var s2 = "";
-
-    for( var i= s.length -1; i >= 0; i--){
-
-        var char= s[i];
-        s2 += char;
+    for ( var i=0; i < arr.length; i++){
+        sum += arr[i];
     }
-    return s2;
+
+    return sum;
 }
+
+console.log(arraySum([2, 3, -1, 5, 7, 9, 10, 15, 95]))
