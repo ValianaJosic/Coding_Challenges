@@ -1,12 +1,17 @@
-function arraySum(arr){
+function rotLeft(a, d) {
+    var j = 0
+    var rotatedarr = []
+    for (i = d; i < a.length; i++) {
 
-    var sum = 0;
-
-    for ( var i=0; i < arr.length; i++){
-        sum += arr[i];
+        rotatedarr[j] = a[i]
+        j++
     }
+    for (i = 0; i < d; i++) {
 
-    return sum;
+        rotatedarr[j] = a[i]
+        j++
+    }
+    return rotatedarr
 }
 
-console.log(arraySum([2, 3, -1, 5, 7, 9, 10, 15, 95]))
+console.log(rotLeft([1, 2, 3, 4, 5, 6], 5));
