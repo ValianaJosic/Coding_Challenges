@@ -1,9 +1,13 @@
-{
+obj = {
   "Structure": {
      "type": "Document",
      "documentType": "document",
-     "componentProperties": {},
-     "themeData": {},
+     "componentProperties": {
+
+     },
+     "themeData": {
+
+     },
      "children": [
         {
            "type": "Container",
@@ -68,3 +72,8 @@
   }
 }
 
+obj = Object.assign(obj, { "TEST": "ADD" })
+
+var myJSON = JSON.stringify(obj);
+
+console.log(myJSON);
