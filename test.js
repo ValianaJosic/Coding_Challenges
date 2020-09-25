@@ -1,79 +1,34 @@
-obj = {
-  "Structure": {
-     "type": "Document",
-     "documentType": "document",
-     "componentProperties": {
+function printPrimes(nPrimes){
+   var n = 0;
+   var i = 2;
 
-     },
-     "themeData": {
+   while(n < nPrimes){
 
-     },
-     "children": [
-        {
-           "type": "Container",
-           "styleId": "style-ish4oam6",
-           "id": "SITE_HEADER",
-           "components": [
-              {
-                 "type": "Component",
-                 "styleId": "style-jliasy0h",
-                 "id": "comp-ish43ju9",
-                 "dataQuery": "#dataItem-j9nxzwid",
-                 "skin": "wysiwyg.common.components.dropdownmenu.viewer.skins.SolidColorMenuButtonSkin",
-                 "layout": {
-                    "width": 396,
-                    "height": 50,
-                    "x": 511,
-                    "y": 39,
-                    "scale": 1,
-                    "rotationInDegrees": 0,
-                    "fixedPosition": false
-                 },
-                 "propertyQuery": "propItem-ish43jvj",
-                 "componentType": "wysiwyg.viewer.components.menus.DropDownMenu"
-              },
-              {
-                 "type": "Component",
-                 "styleId": "style-j1xatrdl",
-                 "id": "comp-it16i3ly",
-                 "dataQuery": "#dataItem-it16i3m5",
-                 "skin": "wysiwyg.viewer.skins.TPAWidgetSkin",
-                 "layout": {
-                    "width": 28,
-                    "height": 34,
-                    "x": 921,
-                    "y": 44,
-                    "scale": 1,
-                    "rotationInDegrees": 0,
-                    "fixedPosition": false
-                 },
-                 "componentType": "wysiwyg.viewer.components.tpapps.TPAWidget"
-              },
-              {
-                 "type": "Component",
-                 "styleId": "txtNew",
-                 "id": "comp-isypcsil",
-                 "dataQuery": "#dataItem-isypcsj9",
-                 "layout": {
-                    "width": 336,
-                    "height": 55,
-                    "x": 15,
-                    "y": 39,
-                    "scale": 1,
-                    "rotationInDegrees": 0,
-                    "fixedPosition": false
-                 },
-                 "propertyQuery": "propItem-isypcsj91",
-                 "componentType": "wysiwyg.viewer.components.WRichText"
-              }
-           ]
-        }
-     ]
-  }
+       if(isPrime(i)){
+           console.log(n, " --> ", i);
+           n++
+       }
+       i++;
+   }
 }
 
-obj = Object.assign(obj, { "TEST": "ADD" })
+function isPrime(n){
+if(n < 2)
+   return false;
 
-var myJSON = JSON.stringify(obj);
+if(n == 2) 
+return true;
 
-console.log(myJSON);
+var maxDiv = Math.sqrt(n);
+
+for(var i=2; i <= maxDiv; i++){
+
+   if ( n % i == 0){
+       return false;
+   }
+}
+return true;
+
+}
+
+console.log(printPrimes(10))
