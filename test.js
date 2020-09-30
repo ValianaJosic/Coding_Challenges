@@ -1,34 +1,15 @@
-function printPrimes(nPrimes){
-   var n = 0;
-   var i = 2;
+let arr = ["1", "Test User", "25", "Developer"];
+let arr1 = [["id", "1"],["name", "Test User"],["age", "25"],["profession", "Developer"]];
 
-   while(n < nPrimes){
 
-       if(isPrime(i)){
-           console.log(n, " --> ", i);
-           n++
-       }
-       i++;
-   }
-}
+//Method 1: Using Object.assign() method
+console.log(Object.assign({}, arr));
+//{0: "1", 1: "Test User", 2: "25", 3: "Developer"}
 
-function isPrime(n){
-if(n < 2)
-   return false;
+// Method 2 Using Spread operator
+console.log({ ...arr });
+//{0: "1", 1: "Test User", 2: "25", 3: "Developer"}
 
-if(n == 2) 
-return true;
-
-var maxDiv = Math.sqrt(n);
-
-for(var i=2; i <= maxDiv; i++){
-
-   if ( n % i == 0){
-       return false;
-   }
-}
-return true;
-
-}
-
-console.log(printPrimes(10))
+// Method 3: Using Object.fromEntries() method
+console.log(Object.fromEntries(arr1));
+//{id: "1", name: "Test User", age: "25", profession: "Developer"}
