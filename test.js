@@ -1,14 +1,12 @@
-var arr = [1,2,3];
-var arr2 = reverseArray(arr);
-console.log(arr2);
+function isAnagram(first, second) {
 
-function reverseArray(arr){
-
-    var arr2 = [];
-
-    for(var i= arr.length - 1; i >= 0; i--){
-        arr2.push(arr[i]);
-    }
-    
-    return arr2;
-}
+    var a = first.toLowerCase();
+    var b = second.toLowerCase();
+  
+    a = a.split("").sort().join("");
+    b = b.split("").sort().join("");
+  
+    return a === b;
+  }
+  
+    console.log(isAnagram("friend", "finder"))
