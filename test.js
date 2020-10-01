@@ -1,15 +1,14 @@
-let obj = { id: "1", name: "Test User", age: "25", profession: "Developer" };
+var arr = [1,2,3];
+var arr2 = reverseArray(arr);
+console.log(arr2);
 
-//Method 1: Convert the keys to Array using - Object.keys()
-console.log(Object.keys(obj));
-// ["id", "name", "age", "profession"]
+function reverseArray(arr){
 
+    var arr2 = [];
 
-// Method 2 Converts the Values to Array using - Object.values()
-console.log(Object.values(obj));
-// ["1", "Test User", "25", "Developer"]
-
-
-// Method 3 Converts both keys and values using - Object.entries()
-console.log(Object.entries(obj));
-//[["id", "1"],["name", "Test User"],["age", "25"],["profession", "Developer"]]
+    for(var i= arr.length - 1; i >= 0; i--){
+        arr2.push(arr[i]);
+    }
+    
+    return arr2;
+}
