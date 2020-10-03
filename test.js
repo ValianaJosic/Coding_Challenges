@@ -1,12 +1,17 @@
-function isAnagram(first, second) {
+function getPositives(ar){
 
-    var a = first.toLowerCase();
-    var b = second.toLowerCase();
-  
-    a = a.split("").sort().join("");
-    b = b.split("").sort().join("");
-  
-    return a === b;
+  var arrpositive = [];
+
+  for( i=0;i <ar.length;i++){
+
+    var pos = ar[i];
+
+    if (pos >= 0){
+      arrpositive.push(pos);
+    }
   }
   
-    console.log(isAnagram("friend", "finder"))
+  return arrpositive
+}
+
+console.log(getPositives([-5, 10, -1, 0, 4, 77,-10]));
