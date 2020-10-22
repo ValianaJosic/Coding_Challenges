@@ -1,10 +1,9 @@
-function sum(a, b, c) {
-    return a + b + c;
+function fib(n){
+	let arr = [0, 1];
+	for (let i = 2; i < n + 1; i++){
+	  arr.push(arr[i - 2] + arr[i -1])
+	}
+   return arr[n]
   }
   
-  function sum(a, b) {
-    return a + b;
-  }
-  
-  var result = sum(5, 10, 10);
-  console.log(result);
+	console.log(fib(8))  
