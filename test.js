@@ -1,9 +1,5 @@
-function fib(n){
-	let arr = [0, 1];
-	for (let i = 2; i < n + 1; i++){
-	  arr.push(arr[i - 2] + arr[i -1])
-	}
-   return arr[n]
+const sortObjects = (arr) => {
+    return arr.sort((a, b) => (a.population > b.population) ? 1 : -1); 
   }
-  
-	console.log(fib(8))  
+
+console.log(sortObjects([1, 11, 27, 2, 34, 123]));  
