@@ -1,5 +1,10 @@
-const sortObjects = (arr) => {
-    return arr.sort((a, b) => (a.population > b.population) ? 1 : -1); 
-  }
+var arr = [1, 2, 3];
+rotateLeft(arr);
+console.log(arr);
 
-console.log(sortObjects([1, 11, 27, 2, 34, 123]));  
+function rotateLeft(arr){
+
+    var first = arr.shift();
+    arr.push(first);
+
+}
