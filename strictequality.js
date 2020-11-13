@@ -5,5 +5,6 @@ function greet (person) {
       return 'hey arnold'
     }
   }
-  greet({ name: 'amy' })
+  
+  console.log(greet({ name: 'amy' }))
   
