@@ -1,9 +1,31 @@
-function fib(n){
-  let arr = [0, 1];
-  for (let i = 2; i < n + 1; i++){
-    arr.push(arr[i - 2] + arr[i -1])
+function lowestIndex(array) {
+
+  var lowestIndex = 0;
+  var j = 0;
+  var position = [];
+
+  for (i = 0; i < array.length; i++) {
+
+    if (array[i] <= array[lowestIndex]) {
+
+      smallervalue = array[i];
+      lowestIndex = i;
+
+    }
   }
- return arr[n]
+
+  for (i = 0; i < array.length; i++) {
+
+    if (smallervalue === array[i]) {
+
+      position[j] = i;
+      j++;
+      
+    }
+  }
+
+  return position;
+
 }
 
-  console.log(fib(8))
+console.log(lowestIndex([-1, -7, 1, 5, -7, 0, 3, -7, 0])); 
