@@ -1,12 +1,34 @@
-function arraySum(arr){
+function printPrimes(nPrimes){
+  var n = 0;
+  var i = 2;
 
-  var sum = 0;
+  while(n < nPrimes){
 
-  for ( var i=0; i < arr.length; i++){
-      sum += arr[i];
+      if(isPrime(i)){
+          console.log(n, " --> ", i);
+          n++
+      }
+      i++;
   }
-
-  return sum;
 }
 
-console.log(arraySum([2, 3, -1, 5, 7, 9, 10, 15, 95]))
+function isPrime(n){
+if(n < 2)
+  return false;
+
+if(n == 2) 
+return true;
+
+var maxDiv = Math.sqrt(n);
+
+for(var i=2; i <= maxDiv; i++){
+
+  if ( n % i == 0){
+      return false;
+  }
+}
+return true;
+
+}
+
+console.log(printPrimes(100))
