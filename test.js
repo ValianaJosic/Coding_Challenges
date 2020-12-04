@@ -1,34 +1,14 @@
-function printPrimes(nPrimes){
-  var n = 0;
-  var i = 2;
+var arr = [1,2,3];
+var arr2 = reverseArray(arr);
+console.log(arr2);
 
-  while(n < nPrimes){
+function reverseArray(arr){
 
-      if(isPrime(i)){
-          console.log(n, " --> ", i);
-          n++
-      }
-      i++;
-  }
+    var arr2 = [];
+
+    for(var i= arr.length - 1; i >= 0; i--){
+        arr2.push(arr[i]);
+    }
+    
+    return arr2;
 }
-
-function isPrime(n){
-if(n < 2)
-  return false;
-
-if(n == 2) 
-return true;
-
-var maxDiv = Math.sqrt(n);
-
-for(var i=2; i <= maxDiv; i++){
-
-  if ( n % i == 0){
-      return false;
-  }
-}
-return true;
-
-}
-
-console.log(printPrimes(100))
