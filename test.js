@@ -1,10 +1,9 @@
 var arr = [1, 2, 3];
-rotateLeft(arr);
+rotateRight(arr);
 console.log(arr);
 
-function rotateLeft(arr){
+function rotateRight(arr) {
 
-    var first = arr.shift();
-    arr.push(first);
-
+    var last = arr.pop();
+    arr.unshift(last);
 }
