@@ -1,14 +1,10 @@
-var arr = [1,2,3];
-var arr2 = reverseArray(arr);
-console.log(arr2);
+var arr = [1, 2, 3];
+rotateLeft(arr);
+console.log(arr);
 
-function reverseArray(arr){
+function rotateLeft(arr){
 
-    var arr2 = [];
+    var first = arr.shift();
+    arr.push(first);
 
-    for(var i= arr.length - 1; i >= 0; i--){
-        arr2.push(arr[i]);
-    }
-    
-    return arr2;
 }
