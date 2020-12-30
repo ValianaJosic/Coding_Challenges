@@ -1,32 +1,15 @@
-function lowestIndex(array) {
+function sumDigits(n){
 
-  var lowestIndex = 0;
-  var j = 0;
-  var position = [];
+  var s = n.toString();
+  var sum = 0;
 
-  for (i = 0; i < array.length; i++) {
+  for(var char of s){
 
-    if (array[i] <= array[lowestIndex]) {
-
-      smallervalue = array[i];
-      lowestIndex = i;
-
-    }
+      var digit = parseInt(char);
+      sum += digit;
   }
-
-  for (i = 0; i < array.length; i++) {
-
-    if (smallervalue === array[i]) {
-
-      position[j] = i;
-      j++;
-      
-    }
-  }
-
-  return position;
-
+  return sum;
 }
 
-console.log(lowestIndex([-1, -7, 1, 5, -7, 0, 3, -7, 0])); 
+console.log( "Sum :", sumDigits(1235231))
   
