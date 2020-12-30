@@ -1,16 +1,32 @@
-let arr = ["1", "Test User", "25", "Developer"];
-let arr1 = [["id", "1"],["name", "Test User"],["age", "25"],["profession", "Developer"]];
+function lowestIndex(array) {
 
+  var lowestIndex = 0;
+  var j = 0;
+  var position = [];
 
-//Method 1: Using Object.assign() method
-console.log(Object.assign({}, arr));
-//{0: "1", 1: "Test User", 2: "25", 3: "Developer"}
+  for (i = 0; i < array.length; i++) {
 
-// Method 2 Using Spread operator
-console.log({ ...arr });
-//{0: "1", 1: "Test User", 2: "25", 3: "Developer"}
+    if (array[i] <= array[lowestIndex]) {
 
-// Method 3: Using Object.fromEntries() method
-console.log(Object.fromEntries(arr1));
-//{id: "1", name: "Test User", age: "25", profession: "Developer"}
+      smallervalue = array[i];
+      lowestIndex = i;
+
+    }
+  }
+
+  for (i = 0; i < array.length; i++) {
+
+    if (smallervalue === array[i]) {
+
+      position[j] = i;
+      j++;
+      
+    }
+  }
+
+  return position;
+
+}
+
+console.log(lowestIndex([-1, -7, 1, 5, -7, 0, 3, -7, 0])); 
   
