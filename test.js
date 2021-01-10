@@ -1,10 +1,19 @@
-var x,y,chr;
-for(x=1; x <=6; x++)
+function foo1()
 {
-   for (y=1; y < x; y++)
-     {
-    chr=chr+("*");        
-      }
- console.log(chr);
- chr='';    
+  return {
+      bar: "hello"
+  };
 }
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+
+console.log("foo1 returns:");
+console.log(foo1());
+console.log("foo2 returns:");
+console.log(foo2());
