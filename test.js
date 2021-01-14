@@ -1,19 +1,17 @@
-function foo1()
-{
-  return {
-      bar: "hello"
-  };
+function getPositives(ar){
+
+  var arrpositive = [];
+
+  for( i=0;i <ar.length;i++){
+
+    var pos = ar[i];
+
+    if (pos >= 0){
+      arrpositive.push(pos);
+    }
+  }
+  
+  return arrpositive
 }
 
-function foo2()
-{
-  return
-  {
-      bar: "hello"
-  };
-}
-
-console.log("foo1 returns:");
-console.log(foo1());
-console.log("foo2 returns:");
-console.log(foo2());
+console.log(getPositives([-5, 10, -1, 0, 4, 77,-10]));
