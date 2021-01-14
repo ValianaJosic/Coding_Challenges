@@ -1,17 +1,12 @@
-function getPositives(ar){
+function arraySum(arr){
 
-  var arrpositive = [];
+  var sum = 0;
 
-  for( i=0;i <ar.length;i++){
-
-    var pos = ar[i];
-
-    if (pos >= 0){
-      arrpositive.push(pos);
-    }
+  for ( var i=0; i < arr.length; i++){
+      sum += arr[i];
   }
-  
-  return arrpositive
+
+  return sum;
 }
 
-console.log(getPositives([-5, 10, -1, 0, 4, 77,-10]));
+console.log(arraySum([2, 3, -1, 5, 7, 9, 10, 15, 95]))
