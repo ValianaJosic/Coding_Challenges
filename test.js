@@ -1,9 +1,7 @@
-var sum = 0;
-for (var x = 0; x < 1000; x++)
-{
-    if (x % 3 === 0 || x % 5 === 0)
-    {
-       sum += x;
-    }
-}
-console.log(sum);
+function filterPositives(arr){
+
+    return  arr.filter( el => el >= 0);
+ }
+ 
+ console.log(filterPositives([-5 , 10, -3 , 12, -9, 5, 90, 0, 1]));
+ 
