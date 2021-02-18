@@ -1,7 +1,10 @@
-function filterPositives(arr){
+var arr = [1, 2, 3];
+rotateLeft(arr);
+console.log(arr);
 
-    return  arr.filter( el => el >= 0);
- }
- 
- console.log(filterPositives([-5 , 10, -3 , 12, -9, 5, 90, 0, 1]));
- 
+function rotateLeft(arr){
+
+    var first = arr.shift();
+    arr.push(first);
+
+}
