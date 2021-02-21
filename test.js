@@ -1,19 +1,8 @@
-function foo1()
-{
-  return {
-      bar: "hello"
-  };
+const anagrams = (str1, str2) => {
+  if(str1.length !== str2.length) { //step 1
+      return false;
+  }
+  let sort1 = str1.split('').sort(); // step 2
+  let sort2 = str2.split('').sort();
+  return sort1.join('') === sort2.join('');
 }
-
-function foo2()
-{
-  return
-  {
-      bar: "hello"
-  };
-}
-
-console.log("foo1 returns:");
-console.log(foo1());
-console.log("foo2 returns:");
-console.log(foo2());
