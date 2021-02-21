@@ -1,34 +1,19 @@
-function printPrimes(nPrimes){
-  var n = 0;
-  var i = 2;
-
-  while(n < nPrimes){
-
-      if(isPrime(i)){
-          console.log(n, " --> ", i);
-          n++
-      }
-      i++;
-  }
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
 }
 
-function isPrime(n){
-if(n < 2)
-  return false;
-
-if(n == 2) 
-return true;
-
-var maxDiv = Math.sqrt(n);
-
-for(var i=2; i <= maxDiv; i++){
-
-  if ( n % i == 0){
-      return false;
-  }
-}
-return true;
-
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
 }
 
-console.log(printPrimes(100))
+console.log("foo1 returns:");
+console.log(foo1());
+console.log("foo2 returns:");
+console.log(foo2());
